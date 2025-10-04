@@ -7,9 +7,9 @@ import os
 
 app = Flask(__name__)
 
-GITHUB_TOKEN = os.getenv('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')
-GITHUB_USERNAME = os.getenv('ERRORR-xa') 
-VERCEL_TOKEN = os.getenv('Wmchn44a5tnWTgR6dI6IUdFL')
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+GITHUB_USERNAME = os.getenv('GITHUB_USERNAME') 
+VERCEL_TOKEN = os.getenv('VERCEL_TOKEN')
 
 @app.route('/')
 def home():
@@ -114,6 +114,3 @@ def upload_file_to_repo(repo_name, file_path, content):
     except Exception as e:
         print(f"Upload Error: {e}")
         return False
-
-if __name__ == '__main__':
-    app.run(debug=True)
